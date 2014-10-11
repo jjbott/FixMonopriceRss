@@ -7,7 +7,7 @@ var init = function(router) {
 		var client = new rest.Client();
 
 		client.get("http://www.monoprice.com/products/rssdailydeal/rss.asp", function(data, response){
-			response.set('Content-Type', 'application/rss+xml');
+			res.set('Content-Type', 'application/rss+xml');
 			res.send(data.split('<script')[0]);
 		 });
 
