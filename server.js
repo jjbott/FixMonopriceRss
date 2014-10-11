@@ -1,5 +1,6 @@
-var express    = require('express'); 	
-var app        = express(); 	
+var express = require('express'); 	
+var morgan = require('morgan');
+var app = express(); 	
 
 var port = process.env.PORT || 8080; 	
 
@@ -11,7 +12,7 @@ require("fs").readdirSync("./plugins").forEach(function(file) {
   		plugin.init(router);
   	}
 });
-
+app.use(morgan('combined'));
 app.use('/', router);
 app.listen(port);
 console.log('Listening on ' + port);
