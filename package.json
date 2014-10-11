@@ -1,0 +1,24 @@
+{
+  "name": "FixMonopriceRss",
+  "version": "1.0.0",
+  "description": "Fixes the Monoprice RSS feed",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jjbott/FixMonopriceRss.git"
+  },
+  "author": "Joe Bott",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jjbott/FixMonopriceRss/issues"
+  },
+  "homepage": "https://github.com/jjbott/FixMonopriceRss",
+  "dependencies": {
+    "express": "^4.9.5",
+    "node-rest-client": "^1.0.3"
+  }
+}
