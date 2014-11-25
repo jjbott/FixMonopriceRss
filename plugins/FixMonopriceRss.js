@@ -8,7 +8,9 @@ var init = function(router) {
 
 		client.get("http://www.monoprice.com/products/rssdailydeal/rss.asp", function(data, response){
 			res.set('Content-Type', 'application/rss+xml');
-			res.send(data.split('<script')[0]);
+			var xml = data.split('<script')[0]; // Strip out google analytics js from the end
+			xml = xml.replace(/<\/item>[\s\S]*<item>/g, '</item><item>'); // Get rid of the garbage between items
+			res.send(xml);
 		 });
 
 	});
