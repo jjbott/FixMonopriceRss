@@ -1,3 +1,5 @@
+###This project is obsolete. As of early Decmber 2014, monoprice.com has given up on trying to make a valid rss feed. The endpoint at http://www.monoprice.com/products/rssdailydeal/rss.asp still returns something, but it is only a couple lines of invalid xml and Google Analytics JS.
+
 FixMonopriceRss
 ===============
 
@@ -20,7 +22,6 @@ If you're already running an express server, this functionality can be added to 
 * Calling the init function, passing the express router: `monopriceRssFix.init(router);`
 
 See server.js for an example
-
 
 
 
